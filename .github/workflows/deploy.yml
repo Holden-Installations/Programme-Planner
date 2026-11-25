@@ -12,13 +12,14 @@ permissions:
   contents: read
 
 concurrency:
-  group: programme-planner-test
+  group: programme-planner-production
   cancel-in-progress: false
 
 jobs:
   pipeline:
     uses: Holden-Installations/shared-workflows/.github/workflows/monday-deploy.yml@main
     with:
-      app_version_id: '20757899'
+      app_id: '11792918'
+      app_name: 'Programme Planner'
     secrets:
       MONDAY_API_TOKEN: ${{ secrets.MONDAY_API_TOKEN }}
